@@ -39,3 +39,6 @@ logs/
 gptodo/migrations/*.py
 gptodo/migrations/*.pyc
 gptodo/__pycache__/  # For Django 3.6+
+
+# Ignore the secrets.py file
+secrets.py
