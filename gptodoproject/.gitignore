@@ -1,0 +1,41 @@
+# Python/Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pyzw
+*.DS_Store
+*.coverage
+*.pytest_cache/
+*.pyc
+
+# Virtual environment
+venv/
+venv*/
+*.env
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Database
+db.sqlite3
+
+# Local development settings (Modify based on your actual settings)
+gptodo/local_settings.py
+
+# Log files
+logs/
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Django migration files
+gptodo/migrations/*.py
+gptodo/migrations/*.pyc
+gptodo/__pycache__/  # For Django 3.6+
