@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPTodoアプリケーション</title>
+</head>
+<body>
+    <h1>GPTodoアプリケーション</h1>
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <label for="todo_input">やりたいこと：</label>
+        <input type="text" name="todo_input" id="todo_input" required>
+        <button type="submit">生成</button>
+    </form>
+</body>
+</html>
