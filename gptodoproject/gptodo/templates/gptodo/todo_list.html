@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>生成されたTodoリスト</title>
+    <title>GPTodo - 生成されたTodoリスト</title>
 </head>
 <body>
-    <h1>生成されたTodoリスト</h1>
+    <h1>GPTodo - 生成されたTodoリスト</h1>
+    <p>以下はChatGPT APIを使って生成されたTodoリストです：</p>
     <ul>
-        {% for todo_item in todo_list %}
-            <li>{{ todo_item.title }}</li>
+        {% for item in todo_list %}
+            <li>{{ item }}</li>
         {% endfor %}
     </ul>
+    <a href="/">戻る</a>
 </body>
 </html>

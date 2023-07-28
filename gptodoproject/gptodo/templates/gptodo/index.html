@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GPTodoアプリケーション</title>
+    <title>GPTodo - Todoリスト生成アプリ</title>
 </head>
 <body>
-    <h1>GPTodoアプリケーション</h1>
-    <form method="post" action="{% url 'index' %}">
+    <h1>GPTodo - Todoリスト生成アプリ</h1>
+    <form method="post">
         {% csrf_token %}
-        <label for="todo_input">やりたいこと：</label>
-        <input type="text" name="todo_input" id="todo_input" required>
+        <label for="todo_input">やりたいことを入力してください：</label>
+        <input type="text" id="todo_input" name="todo_input" required>
         <button type="submit">生成</button>
     </form>
+
+    {% if todo_input %}
+        <h2>入力したやりたいこと：</h2>
+        <p>{{ todo_input }}</p>
+
+        {% if todo_list %}
+            <h2>生成されたTodoリスト：</h2>
+            <p>{{ todo_list }}</p>
+        {% endif %}
+    {% endif %}
 </body>
 </html>
